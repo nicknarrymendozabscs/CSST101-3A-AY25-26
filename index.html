@@ -3,83 +3,254 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Docs - Portfolio</title>
+    <title>The Docs - Nick Narry S. Mendoza</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            box-sizing: border-box;
         }
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
+        
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
-        .portfolio-section {
-            background-color: white;
+        
+        .profile-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #667eea;
+            margin: 0 auto 1.5rem;
+            background: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: #667eea;
+            background-image: url('https://via.placeholder.com/150x150/667eea/white?text=NM');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .profile-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .profile-header .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .profile-header .description {
+            font-size: 1rem;
+            color: #777;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             margin: 2rem 0;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
             color: #333;
+            position: relative;
+            padding-bottom: 0.5rem;
         }
+        
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+        
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
+        
         .project-card {
-            background-color: #f9f9f9;
+            background: linear-gradient(135deg, #f8f9ff, #e8ecff);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.2);
+        }
+        
+        .project-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .project-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-item {
+            background: linear-gradient(135deg, #f8f9ff, #e8ecff);
             padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #007acc;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+        }
+        
+        .contact-item i {
+            font-size: 2rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-item p {
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .profile-header {
+                padding: 2rem;
+            }
+            
+            .profile-header h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>The Docs</h1>
-        <p>Computer Science Student Portfolio</p>
-    </header>
-
     <div class="container">
-        <section class="portfolio-section">
-            <h2>About</h2>
-            <p>Welcome to my portfolio showcasing projects and assignments from CSST101-3A-AY25-26.</p>
+        <header class="profile-header">
+            <div class="profile-picture"></div>
+            <h1>Nick Narry S. Mendoza</h1>
+            <p class="subtitle">Computer Science Student</p>
+            <p class="description">Welcome to my portfolio showcasing projects and assignments from CSST101 Advanced Presentation and Reasoning - AY25-26</p>
+        </header>
+
+        <section class="section">
+            <h2>About Me</h2>
+            <p>I am a dedicated Computer Science student passionate about technology, problem-solving, and continuous learning. This portfolio demonstrates my journey through advanced presentation and reasoning concepts, showcasing both technical skills and analytical thinking abilities.</p>
         </section>
 
-        <section class="portfolio-section">
-            <h2>Projects</h2>
+        <section class="section">
+            <h2>CSST101 Assignments</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>Project 1</h3>
-                    <p>Description of your first project...</p>
+                    <h3>Assignment 1: Logic and Reasoning</h3>
+                    <p>Exploring fundamental concepts of logical reasoning and their applications in computer science problem-solving.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Project 2</h3>
-                    <p>Description of your second project...</p>
+                    <h3>Assignment 2: Advanced Presentations</h3>
+                    <p>Developing effective presentation techniques for technical concepts and complex algorithms.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Project 3</h3>
-                    <p>Description of your third project...</p>
+                    <h3>Assignment 3: Critical Analysis</h3>
+                    <p>Analyzing and evaluating different approaches to computational problems and their efficiency.</p>
                 </div>
             </div>
         </section>
 
-        <section class="portfolio-section">
-            <h2>Contact</h2>
-            <p>Email: your.email@example.com</p>
-            <p>GitHub: github.com/yourusername</p>
+        <section class="section">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <p>nicknarry.mendoza@email.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <h4>GitHub</h4>
+                    <p>github.com/nicknarrymendozabscs</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Course</h4>
+                    <p>CSST101-3A-AY25-26</p>
+                </div>
+            </div>
         </section>
     </div>
 </body>
