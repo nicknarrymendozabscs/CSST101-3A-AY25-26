@@ -1,0 +1,21 @@
+{
+  "name": "the-docs",
+  "version": "1.0.0",
+  "description": "Portfolio of Nick Narry S. Mendoza",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process not defined yet.'"
+  },
+  "keywords": [
+    "portfolio",
+    "web",
+    "CSST101"
+  ],
+  "author": "Nick Narry S. Mendoza",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
