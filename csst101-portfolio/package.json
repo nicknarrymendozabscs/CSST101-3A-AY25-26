@@ -1,0 +1,22 @@
+{
+  "name": "csst101-portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio website for showcasing CSST101-3A-ADVANCE presentation and reasoning.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process can be defined here'",
+    "test": "echo 'Test process can be defined here'"
+  },
+  "keywords": [
+    "portfolio",
+    "csst101",
+    "web development"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
