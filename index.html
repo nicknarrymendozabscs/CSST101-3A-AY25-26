@@ -207,18 +207,18 @@
             width: 400px;
             height: 400px;
         }
-
-        .profile-pic {
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            background: var(--bg-card);
-            background-image: url('https://scontent.fmnl25-4.fna.fbcdn.net/v/t39.30808-6/480624794_950708553868564_5455032760963684913_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFpxregFpMHG6zEQlE-HTWq-GWrXl0Gq0H4ZateXQarQR5Vb5yyXMuFTd-s3yUyibauw5swmpqnbwiiKM1zpjDK&_nc_ohc=91xk1gbN9QoQ7kNvwFtEWF0&_nc_oc=AdlE63pnDDAm2B4NaoIGQKVsKOD2qgKt6UNZzQFe6mPh26TUg8REj7YURVcHqPCTHwc&_nc_zt=23&_nc_ht=scontent.fmnl25-4.fna&_nc_gid=_H6S9DJ9BR29oNnVOj2JBg&oh=00_AfUMDaeC5OQe5ocy2z_pG9fMhahX8_L--iVMPFb24eQQKg&oe=68AD58BF');
-            background-size: cover;
-            background-position: center;
-        }
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    background-image: url('/activity/image.png');
+    background-position: center;
+    background-size: cover;   /* <-- Add this line */
+    background-repeat: no-repeat; /* <-- Add this line */
+}
 
         /* Sections */
         .section {
@@ -611,7 +611,7 @@
                 </div>
                 <div class="hero-image">
                     <div class="profile-container">
-                        <div class="profile-pic"></div>
+                        <div class="profile-pic" ></div>
                     </div>
                 </div>
             </div>
